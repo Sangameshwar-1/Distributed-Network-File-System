@@ -1,0 +1,5 @@
+set logging file gdb_bt.txt
+set logging on
+run
+bt
+quit

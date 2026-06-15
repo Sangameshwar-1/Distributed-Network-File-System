@@ -1,0 +1,20 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff7bff640 (LWP 1052)]
+[New Thread 0x7ffff73fe640 (LWP 1062)]
+
+Thread 3 "storage_server" received signal SIGSEGV, Segmentation fault.
+[Switching to Thread 0x7ffff73fe640 (LWP 1062)]
+0x0000555555556920 in ss_handle_client_connection (arg=0x0) at src/storage_server/ss_client_handler.c:13
+13	void* ss_handle_client_connection(void* arg) {
+#0  0x0000555555556920 in ss_handle_client_connection (arg=0x0)
+    at src/storage_server/ss_client_handler.c:13
+#1  0x00007ffff7c94ac3 in start_thread (arg=<optimized out>)
+    at ./nptl/pthread_create.c:442
+#2  0x00007ffff7d268d0 in clone3 ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+A debugging session is active.
+
+	Inferior 1 [process 926] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
